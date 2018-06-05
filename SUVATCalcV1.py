@@ -1,6 +1,7 @@
-##SUVAT Calc V1.0.0.1 by Anush Patel ##
-## Project Vanguard ##
-
+##SUVAT Calc V1.1.0.0 by Anush Patel ##
+## Project Penrose ##
+## If Anyone wants to use this don't steal it. ##
+## COMMENTED OUT REGIONS WILL BE FIXED AND INTERGRATED IN LATER BUILDS ##
 print('SUVAT Calculator - If have no data leave blank')
 ##S= int(input('Please enter the displacement:'))
 ##U= int(input('Please enter the Inital velocity:'))
@@ -30,5 +31,47 @@ if CalcWhat == 't':
                 print(time_with_VAS)
     if VWhat == 'n':
         print('Im afraid you need a Final Velocity')
+
+if CalcWhat == 's':
+    VWhat= input('Do you have a U value?')
+    if VWhat == 'y':
+        UWhat = input('Do you have a A value')
+        if UWhat =='y':
+            AWhat = input('Do you have T value')
+            if AWhat == 'y':
+                AskA = float(input('Please Input Acceleration Value:'))
+                AskU = float(input('Please input Inital Velocity:'))
+                AskT = float(input('Please input the time taken:'))
+                displacement_with_UTA = AskU*AskT + AskA*AskT**2/2
+                print(displacement_with_UTA)
+        elif UWhat =='n':
+            print('Okay')
+            AWhat_u = input('Do you have A value')
+            if AWhat_u== 'y':
+                AskA = float(input('Please Input Acceleration Value:'))
+                AskV = float(input('Please input Final Velocity:'))
+                time_with_VAS = ('Coming soon') 
+                print(time_with_VAS)
+    elif VWhat == 'n':
+        UWhat = input('Do you have a V value')
+        if UWhat =='y':
+            AWhat = input('Do you have T value')
+            if AWhat == 'y':
+                AAWhat = input('Do You have a A Value')
+                if AAWhat == 'y':
+                    AskA = float(input('Please Input Acceleration Value:'))
+                    AskU = float(input('Please input Final Velocity:'))
+                    AskT = float(input('Please input the time taken:'))
+                    displacement_with_VTA = AskU*AskT - AskA*AskT**2/2
+                    print(displacement_with_VTA)
+####       elif UWhat =='n':
+##            print('Okay')
+##            AWhat_u = input('Do you have A value')
+##            if AWhat_u== 'y':
+##                AskA = float(input('Please Input Acceleration Value:'))
+##                AskV = float(input('Please input Final Velocity:'))
+##                time_with_VAS = ('Coming soon') 
+##                print(time_with_VAS)
+        
 ##Calc = S*U*V*A*T
 ##print(Calc)
