@@ -8,6 +8,9 @@ print('SUVAT Calculator - If have no data leave blank')
 ##V= int(input('Please enter the Final Velocity:'))
 ##A= int(input('Please enter the acceleration:'))
 ##T= int(input('Please enter the time taken:'))
+## BREAKPOINT ABOVE == GOOOD ##
+import cmath
+
 CalcWhat = input('What would you like to calc?')
 if CalcWhat == 't':
     VWhat= input('Do you have a V value?')
@@ -25,10 +28,18 @@ if CalcWhat == 't':
             print('Okay')
             AWhat_u = input('Do you have A value')
             if AWhat_u== 'y':
-                AskA = float(input('Please Input Acceleration Value:'))
-                AskV = float(input('Please input Final Velocity:'))
-                time_with_VAS = ('Coming soon') 
+                a= float(input('Please Input Acceleration Value multiplied by 1/2:'))
+                b = float(input('Please input Final Velocity:'))
+                c = float(input('Please input the Displacement Value'))
+                # calculates the discriminant=
+                d = (b**2) - (4*a*c)
+                sol1 = (-b-cmath.sqrt(d))/(2*a)
+                sol2 = (-b+cmath.sqrt(d))/(2*a)
+                print('The Time taken is {0} and {1}'.format(sol1,sol2))
+                time_with_VAS = ('Thanks for using SUVAT Calc') 
                 print(time_with_VAS)
+            if AWhat_u == 'n':
+                print ('You have messed up. You need V and/or U')
     if VWhat == 'n':
         print('Im afraid you need a Final Velocity')
 
